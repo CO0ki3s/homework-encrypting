@@ -1,0 +1,12 @@
+https://www.example.com/user/?profilEditUserId=12345
+https://www.example.com/user/?profilEditUserId=59562135
+https://www.example.com/user/?postId=536ade56
+https://www.example.com/user/?serviceId=52468
+https://www.example.com/user/?serviceId=abc
+https://www.example.com/user/?serviceId=645sd4f6s5d4f
+https://www.example.com/user/?serviceId=121s3f2df1
+https://www.example.com/user/?serviceId=13sdf2sdf12
+https://www.example.com/user/?serviceId=1s2d3f1s3df
+https://www.example.com/user/?serviceId=45sd1f3sdf51
+https://www.example.com/user/?serviceId=84sdf66sf4][;s5
+https://www.example.com/user/?serviceId=46sd84f68e
