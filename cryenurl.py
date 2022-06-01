@@ -26,26 +26,17 @@ class ProtectUidToUrl:
         :return: Returns an encrypted or decrypted URL
         """
 
-        # the encryption key is associated with the uid - the part of the URL we are encrypting or decrypting
         key = self.key + uid
         if argname == "crypt":
-            # XOR function which encrypts the necessary string
             xored = ''.join(chr(ord(x) ^ ord(y)) for (x, y) in zip(uid, cycle(str(key))))
-            # method returns a bytearray object which is an array of the given bytes.
             bin_array = bytearray(xored, 'utf-8')
-            # encode to Base64 format
             encode = base64.standard_b64encode(bin_array)
-            # decode to utf-8 format
             final = encode.decode('utf-8')
             return url + "=" + final
         elif argname == "decrypt":
-            # method returns a bytearray object which is an array of the given bytes.
             bin_array = bytearray(uid, 'utf-8')
-            # decode from Base64 format
             decode = base64.standard_b64decode(bin_array)
-            # decode to utf-8 format
             xored = decode.decode('utf-8')
-            # again using the XOR function with the same encryption key returns the original value of the string
             final = ''.join(chr(ord(x) ^ ord(y)) for (x, y) in zip(xored, cycle(str(key))))
             return url + "=" + final
         else:
