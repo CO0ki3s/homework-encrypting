@@ -45,8 +45,8 @@ class ProtectUidToUrl:
             decode = base64.standard_b64decode(bin_array)
             # decode to utf-8 format
             xored = decode.decode('utf-8')
-            final = ''.join(chr(ord(x) ^ ord(y)) for (x, y) in zip(xored, cycle(str(key))))
             # again using the XOR function with the same encryption key returns the original value of the string
+            final = ''.join(chr(ord(x) ^ ord(y)) for (x, y) in zip(xored, cycle(str(key))))
             return url + "=" + final
         else:
             print("bad arg")
